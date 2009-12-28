@@ -1,0 +1,16 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="sitemap-plugin">
+    <plugin-info>
+        <description>Provides a servlet which creates sitemap xml files.</description>
+        <version>${project.version}</version>
+        <vendor name="www.banapple.de" url="http://www.banapple.de"/>
+    </plugin-info>
+
+    <servlet name="SitemapServlet" key="sitemapServlet"
+		class="de.banapple.confluence.plugin.sitemap.SitemapServlet">
+		<description>
+			Returns a sitemap xml.
+		</description>
+		<url-pattern>/sitemap</url-pattern>
+	</servlet>
+	
+</atlassian-plugin>

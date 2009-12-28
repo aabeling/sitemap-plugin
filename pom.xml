@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>com.atlassian.confluence.plugin.base</groupId>
+        <artifactId>confluence-plugin-base</artifactId>
+        <version>22</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.banapple.confluence.plugin</groupId>
+    <artifactId>sitemap</artifactId>
+    <version>0.1-SNAPSHOT</version>
+
+    <name>Sitemap Plugin</name>
+    <packaging>atlassian-plugin</packaging>
+
+    <properties>
+        <atlassian.plugin.key>de.banapple.confluence.sitemap-plugin</atlassian.plugin.key>
+
+        <!-- Confluence version -->
+        <atlassian.product.version>2.9</atlassian.product.version>
+        <!-- Confluence plugin functional test library version -->
+        <atlassian.product.test-lib.version>1.4.1</atlassian.product.test-lib.version>
+        <!-- Confluence data version -->
+        <atlassian.product.data.version>2.9</atlassian.product.data.version>
+        <jdkLevel>1.5</jdkLevel>
+    </properties>
+
+    <!-- TODO: Add project description -->
+    <!--
+    <description></description>
+	<url></url>
+    -->
+
+    <!-- TODO: Complete developer details -->
+    <!--
+	<developers>
+		<developer>
+			<name>John Smith</name>
+			<organization>Example Company</organization>
+		</developer>
+	</developers>
+	-->
+
+    <!-- TODO: Complete source control details -->
+    <!--
+    <scm>
+		<connection></connection>
+		<developerConnection></developerConnection>
+		<url></url>
+	</scm>
+	-->
+
+    <!--You can define Ant tasks to be executed before and/or after integration tests --><!--
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>pre-integration-test-user-ant-tasks</id>
+                        <configuration>
+                            <tasks>
+                                <echo message="Ant task before integration tests."/>
+                            </tasks>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>post-integration-test-user-ant-tasks</id>
+                        <configuration>
+                            <tasks>
+                                <echo message="Ant task _after_ integration tests."/>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>-->
+
+	<dependencies>
+		<dependency>
+			<groupId>com.atlassian.confluence</groupId>
+			<artifactId>confluence</artifactId>
+			<version>${confluence.version}</version>
+			<scope>provided</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>tangosol-coherence</groupId>
+					<artifactId>coherence</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>tangosol-coherence</groupId>
+					<artifactId>tangosol</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+	
+</project>
