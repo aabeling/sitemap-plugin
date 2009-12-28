@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -40,7 +39,8 @@ public class SitemapServlet extends HttpServlet
     private SettingsManager settingsManager;
     private Configuration configuration;
     
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException
 	{
